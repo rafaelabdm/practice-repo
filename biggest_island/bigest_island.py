@@ -57,7 +57,8 @@ def search_islands(matrix: list[list]) -> list[list]:
 
     while row < rows_count and not end_search:
         while slot < slots_per_row:
-            if not temp_island and matrix[row][slot] == 1 and (row, slot) and not check_discovered_islands((row, slot), islands):
+            if not temp_island and matrix[row][slot] == 1 \
+                and (row, slot) and not check_discovered_islands((row, slot), islands):
                 temp_island.add((row, slot))
                 slot += 1
                 continue
@@ -90,13 +91,18 @@ def search_islands(matrix: list[list]) -> list[list]:
     return islands
 
 
-# There are more Example Matrices in the file examples.py, test it out!
-from examples import *
-
-def main():
-    islands = search_islands(matrix_1)
+def main(selected_matrix: list[list]):
+    islands = search_islands(selected_matrix)
     print(f"This matrix have {len(islands)} islands.")
     print(f"The biggest one has {get_biggest_island(islands)} slots of land!")
 
 
-main()
+# There are more Example Matrices in the file examples.py, test it out!
+from examples import *
+
+main(matrix_1)
+main(matrix_2)
+main(matrix_3)
+main(matrix_4)
+main(matrix_5)
+main(matrix_6)
