@@ -1,6 +1,6 @@
 # Have fun. Stay sharp.
 
-This repo is a selection of some coding questions to practice raw logic, algorithms and creative problem-solving.
+This repo is a selection of some fun coding questions to practice raw logic, algorithms and creative problem-solving.
 
 ### 1. Biggest Island
 
